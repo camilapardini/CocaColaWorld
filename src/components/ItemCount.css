@@ -1,0 +1,18 @@
+.cardProducto{
+    border: 1px solid rgb(111, 107, 107);
+    -webkit-box-shadow: 2px 2px 2px rgb(80, 79, 78);
+    -moz-box-shadow:    2px 2px 2px rgb(87, 87, 85);
+    box-shadow:         2px 2px 2px rgb(80, 80, 79);
+
+}
+
+.cardBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.botonContador{
+    margin: 0.3rem;
+}
