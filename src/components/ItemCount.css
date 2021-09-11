@@ -1,18 +1,21 @@
-.cardProducto{
-    border: 1px solid rgb(111, 107, 107);
-    -webkit-box-shadow: 2px 2px 2px rgb(80, 79, 78);
-    -moz-box-shadow:    2px 2px 2px rgb(87, 87, 85);
-    box-shadow:         2px 2px 2px rgb(80, 80, 79);
 
+.numeroContador{
+    font-weight: 600;
+    font-size: 2rem;
 }
-
-.cardBody{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .botonContador{
-    margin: 0.3rem;
+    margin: 0.7rem;
+    color: white;
+    font-weight: 700;
+    background-color: black;
+    border: none;
 }
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: rgb(223, 22, 22);
+    border-color: black;
+}
+

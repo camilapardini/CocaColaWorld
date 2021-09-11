@@ -1,5 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700;800&display=swap');
+
+
 .navbar {
     -webkit-box-shadow: 3px 3px 3px rgb(62, 61, 59);
     -moz-box-shadow:    3px 3px 3px rgb(46, 46, 45);
     box-shadow:         3px 3px 3px rgb(48, 48, 47);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: rgb(14, 14, 14);
 }
+
+#collasible-nav-dropdown{
+    color: white;
+    text-decoration: none;
+}
+
+#collasible-nav-dropdown:hover{
+    color: rgb(233, 29, 29);
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+}
+
+.link:hover{
+    color: rgb(233, 29, 29);
+}
+
+.logo {
+    width: 100px;
+}
+
+.cart {
+    font-size: 30px;
+    color: white;
+}
+
+.cart:hover {
+    color: rgb(233, 29, 29);
+}
+

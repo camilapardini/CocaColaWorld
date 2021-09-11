@@ -1,13 +1,13 @@
 import React from 'react'
 import { useState } from 'react'
-import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import styles from './ItemCount.css'
+import './ItemCount.css'
 
 
 const ItemCount = ({stock, initial, onAdd}) => {
 
     const [count, setCount] = useState(initial)
+
 
     function sumar (){
         if (count < stock) {
@@ -21,30 +21,21 @@ const ItemCount = ({stock, initial, onAdd}) => {
         }
     }
 
-    const agregarCarrito = () => {
-        onAdd (count)
+
+    const OnAdd=()=>{
+        onAdd(count)
+        console.log("Se han agregado " + count + " productos al carrito.")
     }
+    
 
     return (
         <>
-    <Card  className= "cardProducto" style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="https://assets.stickpng.com/thumbs/580b57fbd9996e24bc43c0de.png" />
-        <Card.Body className= "cardBody">
-            <Card.Title>Coca cola Lata</Card.Title>
-            <Card.Text>
-            Coca cola en lata de 500ml
-            </Card.Text>
-
-       <label className= "numeroContador"> {count} </label>
-            <br />
-            <div className= "botones"> 
-            <Button className= "botonContador" variant="primary" onClick = {restar}>-</Button>
-            <Button className= "botonContador" variant="primary" onClick = {agregarCarrito}>Agregar al carrito</Button>
-            <Button className= "botonContador" variant="primary" onClick = {sumar}>+</Button>
+    <label className= "numeroContador"> {count} </label>
+            <div className= "botones">    
+            <Button className= "botonContador" onClick = {restar}>-</Button>
+            <Button className= "botonContador" onClick = {OnAdd}>Agregar al carrito</Button>
+            <Button className= "botonContador" onClick = {sumar}>+</Button>
             </div>
-        </Card.Body>
-    </Card>
-    
      </>
     )
 }
