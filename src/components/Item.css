@@ -22,3 +22,8 @@
 .tituloCard{
     font-weight: 600;
 }
+
+.imagenProducto{
+    width: 70%;
+    margin-top: 1rem;
+}

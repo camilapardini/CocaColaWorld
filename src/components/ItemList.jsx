@@ -10,18 +10,17 @@ import Item from './Item'
 import './ItemList.css'
 
 const productos = [
-    {
-        id: 1,
+    {   id: 1,
         title: 'Coca-Cola Ucrania',
         description: 'Disfrutá de su exótico sabor naranja y refrescá tus días',
-        price: 1500,
+        price: 200,
         pictureUrl: cocaUcrania
      },
      {
         id: 2,
         title: 'Coca-Cola Rusia',
         description: 'Un cítrico en versión Coca Cola. Refrescante gusto a lima',
-        price: 1500,
+        price: 150,
         pictureUrl: cocaRusia
         
      },
@@ -29,28 +28,28 @@ const productos = [
         id: 3,
         title: 'Coca-Cola Alemania',
         description: 'Sabor vainilla para que consigas ese dulzor que esperabas',
-        price: 1500,
+        price: 250,
         pictureUrl: cocaAlemania
      },
      {
         id: 4,
         title: 'Coca-Cola España',
         description: 'Edición especial de la Coca Cola sabor original, esta vez más refrescante que nunca',
-        price: 1500,
+        price: 200,
         pictureUrl: cocaEspaña
      },
      {
         id: 5,
         title: 'Coca-Cola Korea',
         description: 'Coca Cola frozen para tomar en tus veranos. Directo del freezer a tu mesa!',
-        price: 1500,
+        price: 100,
         pictureUrl: cocaKorea
      },
      {
         id: 6,
         title: 'Coca-Cola Japon',
         description: 'La Coca Cola Plus te otorgará un plus de energía ya que contiene energizante',
-        price: 1500,
+        price: 150,
         pictureUrl: cocaJapon
      }
   ];

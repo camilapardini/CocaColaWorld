@@ -1,4 +1,8 @@
 
+.botones{
+    margin-bottom: 1.5rem;
+}
+
 .numeroContador{
     font-weight: 600;
     font-size: 2rem;
