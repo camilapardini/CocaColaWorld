@@ -18,7 +18,7 @@ function ItemDetail( props ) {
             </div>
             <div className="cardBody">
                 <h3>Ingredientes</h3>
-                <p>Agua potable, azúcar, dióxido de carbono, aromas, ácido: ácido cítrico, regulador de acidez: gluconato de sodio, conservante: benzoato de sodio, estabilizantes: natrioctenil succinato de almidón y ésteres de glicerol de resina de madera, edulcorantes: edulcorantes: Se permite la precipitación.</p>
+                <p>{producto.ingredientes}</p>
                 <h3>Valor Nutricional por porción (100ml)</h3>
                 <ul>
                     <li>Calorías 180kJ/42 kcal</li>
@@ -26,8 +26,8 @@ function ItemDetail( props ) {
                     <li>Proteínas 0%</li>
                     <li>Cafeína 10%</li>
                 </ul>
+                <label className="precioProducto">${producto.price}</label>
                 <div className= "cardFooter">
-                <p>${producto.price}</p>
                 <ItemCount stock={20} initial={1} onAdd = {setItems} />
             </div>
             </div>

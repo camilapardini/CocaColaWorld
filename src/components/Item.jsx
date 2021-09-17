@@ -1,8 +1,7 @@
 import Card from 'react-bootstrap/Card'
 import Button from "react-bootstrap/Button"
-import ItemCount from "./ItemCount"
-import { useState } from 'react'
 import "./Item.css"
+import { Link } from "react-router-dom";
 
 
  function Item(props){
@@ -16,8 +15,9 @@ import "./Item.css"
         <Card.Body className= "cardBody">
             <Card.Title className="tituloCard">{props.title}</Card.Title>
             </Card.Body>
+            <Link to= {`detalle/${props.id}`} >
             <Button className= "botonContador" > Detalles</Button>
-            {/* <ItemCount stock={20} initial={1} onAdd = {setItems} />   */}
+            </Link>
     </Card> 
   
   

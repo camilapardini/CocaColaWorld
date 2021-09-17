@@ -1,27 +1,39 @@
 import { useState, useEffect } from "react"
-import { getUnProducto } from "./promise"
+import { getProductos } from "../ItemList"
 import ItemDetail from "./ItemDetail";
+import { useParams } from  "react-router-dom";
 
-function ItemDetailContainer() {
+const ItemDetailContainer = () => {
 
-    const [ producto, setProducto ] = useState({})
-    const [loading, setloading] = useState(true)
+    const [ producto, setProducto ] = useState()
+
+    const { id } = useParams ();
+
+    
 
     useEffect(() => {
-       getUnProducto
-       .then(resp => {
-           setProducto(resp)
-           setloading(false)
-       }) 
-    }, [])
+    
+        getProductos
+       
+            .then((respuesta) =>{
+                 if  (id){ 
+                const productoFiltrado = respuesta.filter((prod) => prod.id === parseInt(id))
+                setProducto (productoFiltrado)         
+            }else {
+      
+            setProducto(respuesta)         
+        }
+        
+        })
+        .catch((error) => console.log(error))
+              
+        
+    }, [id])
+
 
     return (
         <>
-            {loading ? 
-                    <div></div> 
-                : 
-                    <ItemDetail producto={producto} />
-            }
+            {producto && <ItemDetail key={ producto [0].id} producto={producto[0]} />}
             
         </>
     )
