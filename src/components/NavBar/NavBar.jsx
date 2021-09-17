@@ -9,53 +9,62 @@ import { Link } from "react-router-dom";
 
 
 const NavBar =() => {
-    return (
-        <>
-          <Navbar collapseOnSelect expand="lg">
-          
-  <Container>
+return (
+<>
+  <Navbar collapseOnSelect expand="lg">
 
-      
-  <Navbar.Brand href="/">
-    <a href="/"> <img src = {logo} className= "logo" /></a>
-    </Navbar.Brand>
+    <Container>
 
-
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="me-auto">
+      <Link to="/">
+      <Navbar.Brand>
+        <img src={logo} className="logo" />
+      </Navbar.Brand>
+      </Link>
 
 
-      <Nav.Link href= "/"> <a className= "link">Home</a></Nav.Link>
-    
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="me-auto">
 
-      <Nav.Link href="#Nosotros"><a className= "link">Nosotros</a></Nav.Link>
-      <NavDropdown title="Productos" id="collasible-nav-dropdown">
+          <Link to="/" className="nav-link"> Home</Link>
 
-      
-      <NavDropdown.Item href= "/categoria/botellas">Botellas</NavDropdown.Item>
-      
+          <Link to="#" className="nav-link"> Nosotros</Link>
 
-      
-      <NavDropdown.Item href= "/categoria/latas">Latas</NavDropdown.Item>
-     
+          <NavDropdown title="Productos" id="collasible-nav-dropdown">
 
-      
-      <NavDropdown.Item href= "/categoria/saborizadas">Saborizadas</NavDropdown.Item>
-     
+            <NavDropdown.Item>
+              <Link to="/categoria/botellas" className="categorias">
+              Botellas
+              </Link>
+            </NavDropdown.Item>
 
-      
-      </NavDropdown>
-    </Nav>
-    <Nav>
-      <Nav.Link href="cart"> <CartWidget/></Nav.Link>
-    
-    </Nav>
-  </Navbar.Collapse>
-  </Container>
-</Navbar>
-        
-        </>
-    )
+            <NavDropdown.Item>
+              <Link to="/categoria/latas" className="categorias">
+              Latas
+              </Link>
+            </NavDropdown.Item>
+
+            <NavDropdown.Item>
+              <Link to="/categoria/saborizadas" className="categorias">
+              Saborizadas
+              </Link>
+            </NavDropdown.Item>
+
+
+          </NavDropdown>
+        </Nav>
+        <Nav>
+
+          <Nav.Link href="cart">
+            <CartWidget />
+          </Nav.Link>
+
+        </Nav>
+      </Navbar.Collapse>
+    </Container>
+  </Navbar>
+
+</>
+)
 }
 export default NavBar

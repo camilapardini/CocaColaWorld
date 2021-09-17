@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
         <Card.Body className= "cardBody">
             <Card.Title className="tituloCard">{props.title}</Card.Title>
             </Card.Body>
-            <Link to= {`detalle/${props.id}`} >
+            <Link to= {`/detalle/${props.id}`} >
             <Button className= "botonContador" > Detalles</Button>
             </Link>
     </Card> 

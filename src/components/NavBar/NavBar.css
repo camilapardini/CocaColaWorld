@@ -21,7 +21,7 @@
     display: block;
 }
 
-a .categorias {
+.categorias {
     display: block;
     width: 100%;
     padding: .25rem 1rem;
@@ -35,13 +35,13 @@ a .categorias {
     border: 0;
 }
 
-.link{
-    color: white;
+.nav-link{
+    color: white !important; 
     text-decoration: none;
 }
 
-.link:hover{
-    color: rgb(233, 29, 29);
+.nav-link:hover{
+    color: rgb(233, 29, 29) !important;
 }
 
 .logo {
