@@ -4,7 +4,13 @@ import ItemCount from "../ItemCount"
 
 function ItemDetail( props ) {
     const {producto} = props
-    const [items, setItems] = useState(0)
+    const [cantSeleccionada, setCantSeleccionada] = useState(0)
+
+    const onAdd = (count) =>{
+        console.log("Se han agregado " + count + " productos al carrito")
+        setCantSeleccionada (count)
+    }
+    
 
     return (
         <div className = "itemDetail">
@@ -28,7 +34,7 @@ function ItemDetail( props ) {
                 </ul>
                 <label className="precioProducto">${producto.price}</label>
                 <div className= "cardFooter">
-                <ItemCount stock={20} initial={1} onAdd = {setItems} />
+                <ItemCount stock={20} initial={1} onAdd = {onAdd} />
             </div>
             </div>
           

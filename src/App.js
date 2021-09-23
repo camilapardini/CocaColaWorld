@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer"
 import "./App.css"
+import Cart from "./components/Cart/Cart";
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
@@ -24,7 +26,13 @@ function App() {
                 <ItemDetailContainer />
               </Route>
 
+              <Route exact path= '/cart'>
+                <Cart />
+              </Route>
+
         </Switch>
+
+        <Footer />
       </div>
     </BrowserRouter>
 
