@@ -7,12 +7,9 @@ import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer"
 import "./App.css"
 import Cart from "./components/Cart/Cart";
 import Footer from './components/Footer/Footer'
-import { cartContext } from "./components/Context/cartContext";
 
 function App() {
   return (
-
-    <cartContext.Provider>
     <BrowserRouter>
 
       <div className= "App">
@@ -38,8 +35,6 @@ function App() {
         <Footer />
       </div>
     </BrowserRouter>
-
-    </cartContext.Provider>
 
   );
 }

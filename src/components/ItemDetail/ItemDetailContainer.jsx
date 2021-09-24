@@ -9,8 +9,6 @@ const ItemDetailContainer = () => {
 
     const { id } = useParams ();
 
-    
-
     useEffect(() => {
     
         getProductos

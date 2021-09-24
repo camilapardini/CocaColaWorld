@@ -4,19 +4,18 @@ import ItemCount from "../ItemCount"
 import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
 
-const ItemDetail = ({producto}) => {
-    
+
+function ItemDetail( {producto} ) {
+  
+
     const [cantSeleccionada, setCantSeleccionada] = useState(0)
-    const [boton, setBoton] = useState(true)
+    const [cambiarBoton, setCambiarBoton] = useState(true)
 
     const onAdd = (count) =>{
         console.log("Se han agregado " + count + " productos al carrito")
-        setCantSeleccionada (count)
+        setCambiarBoton (false)
     }
     
-    const cambiarBoton = () =>{
-        setBoton (false)
-    }
 
     return (
         <div className = "itemDetail">
@@ -53,7 +52,7 @@ const ItemDetail = ({producto}) => {
                         <Button className= "botonContador">Seguir comprando</Button>
                     </Link>
                 </div>
-                }  
+             }
             </div>
             </div>
           
