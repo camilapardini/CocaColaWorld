@@ -1,0 +1,19 @@
+.bodyCart{
+    height: 100vh;
+}
+
+
+.contenedorCarrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenedorProd{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+

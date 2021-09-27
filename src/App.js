@@ -7,9 +7,13 @@ import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer"
 import "./App.css"
 import Cart from "./components/Cart/Cart";
 import Footer from './components/Footer/Footer'
+import  CartContextProvider  from "./components/Context/cartContext";
+
 
 function App() {
   return (
+
+    <CartContextProvider>
     <BrowserRouter>
 
       <div className= "App">
@@ -32,9 +36,10 @@ function App() {
 
         </Switch>
 
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </BrowserRouter>
+    </CartContextProvider>
 
   );
 }
