@@ -30,14 +30,14 @@ function App() {
                 <ItemDetailContainer />
               </Route>
 
-              <Route exact path= '/cart'>
+              <Route exact path= "/Cart">
                 <Cart />
               </Route>
 
         </Switch>
 
-        {/* <Footer /> */}
-      </div>
+         <Footer /> 
+       </div>
     </BrowserRouter>
     </CartContextProvider>
 

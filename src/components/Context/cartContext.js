@@ -27,8 +27,8 @@ export default function CartContextProvider ({children}) {
 
 
     const removeItem = (productoId) =>{
-        return cartList.filter(producto => producto.producto.id !== productoId)
-   
+        const array = cartList.filter(producto => producto.producto.id !== productoId) 
+        setCartList(array)
     }
 
     const price =()=>{
@@ -42,6 +42,11 @@ export default function CartContextProvider ({children}) {
         setCartList ([])
     }
 
+    const precioTotal =()=>{
+      return cartList.reduce((acum, valor)=>(acum + (valor.quantity * valor.producto.price)), 0) 
+    }
+
+
     return (
         <cartContext.Provider value= {{
             cartList,
@@ -49,7 +54,8 @@ export default function CartContextProvider ({children}) {
             removeItem,
             price,
             size,
-            clearList
+            clearList,
+            precioTotal
         }}>
             {children}
         </cartContext.Provider>

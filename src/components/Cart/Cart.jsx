@@ -6,40 +6,37 @@ import Button from 'react-bootstrap/Button'
 
 const Cart = () => {
 
-    const {cartList, price, clearList, removeItem} = useCartContext ()
+const {cartList, price, clearList, removeItem, precioTotal} = useCartContext ()
 
-    return  (
-        <>  
-            <div className= "contenedorCarrito" > 
-            <h2> Producto </h2>
-            <h2> Cantidad </h2>
-            <h2> Precio </h2>
-            <h2> Total </h2>
-            <h2> Sacar prod </h2>
+return (
+<div className= "bodyCart">
+
+    {cartList.map(producto =>(
+    <>
+        <div className="contenedorCardsCarro">
+            <div className="contenedorProd" key={producto.producto.id}>
+                 
+                <img src={producto.producto.pictureUrl} className="imgEnCart" />
+                <p>{producto.producto.title}</p>
+                <p>{producto.quantity} unidades</p>
+                <p>${producto.producto.price}</p>
+                <p>${(producto.producto.price * producto.quantity)}</p>
+                <Button className="botonContador" onClick={()=> removeItem(producto.producto.id)} >Eliminar producto</Button>
+
             </div>
+        </div>
+        
+    </>
+    
+    ))}
 
-           {cartList.map(producto =>(
-               <>
-                <div className="contenedorProd" key={producto.producto.id}> 
-                    <p>{producto.producto.title}</p>  
-                    <p>{producto.quantity}</p>  
-                    <p>{producto.producto.price}</p>  
-                    <p>{(producto.producto.price * producto.quantity)}</p>
-                    <Button className= "botonContador" onClick={removeItem(producto.id)} >Borrar prod</Button>
-                </div>
-                
-                <hr/>
-                
-                </>
-                
-            ))}
-             <Button className= "botonContador" onClick={clearList} >Borrar listado Cart </Button>
-            
-        </>
-    )
+    <div className= "precioTotal">
+    <p>Precio total: ${precioTotal()}</p>
+    </div>
+    <Button className="botonContador" onClick={clearList}>Vaciar carrito</Button>
 
+</div>
 
-
-}
+)}
 
 export default Cart

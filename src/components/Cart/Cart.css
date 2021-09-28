@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700;800&display=swap');
+
 .bodyCart{
     height: 100vh;
 }
 
-
-.contenedorCarrito{
+.contenedorCardsCarro{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+  
+    
 }
 
 .contenedorProd{
@@ -15,5 +17,16 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    width: 50%;
+    border-bottom: 1px solid rgb(164, 162, 162);
+    margin-top: 2rem;
+    
 }
 
+.imgEnCart{
+    width: 100px;
+}
+
+.precioTotal{
+    margin-top: 2rem;
+}
