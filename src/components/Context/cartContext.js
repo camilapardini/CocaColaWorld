@@ -11,7 +11,6 @@ export default function CartContextProvider ({children}) {
 
     function addToCart (nuevoProducto) {
         
-
         const buscar = cartList.findIndex(producto => nuevoProducto.producto.id === producto.producto.id)
      
         if(buscar === -1){
@@ -31,10 +30,8 @@ export default function CartContextProvider ({children}) {
         setCartList(array)
     }
 
-    const price =()=>{
-        return cartList.reduce((acum, valor)=>(acum + (valor.quantity* valor.producto.price)), 0) 
-    }
-    const size =()=>{
+  
+    const cantidadTotal =()=>{
         return cartList.reduce((acum, valor)=> acum + valor.quantity, 0) 
     }
 
@@ -52,8 +49,7 @@ export default function CartContextProvider ({children}) {
             cartList,
             addToCart,
             removeItem,
-            price,
-            size,
+            cantidadTotal,
             clearList,
             precioTotal
         }}>

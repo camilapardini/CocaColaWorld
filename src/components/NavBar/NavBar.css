@@ -53,7 +53,14 @@
     color: white;
 }
 
-.cart:hover {
-    color: rgb(233, 29, 29);
+.cartNumber{
+    background-color: red;
+    padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+    border-radius: 50%;
 }
+
+.cartNumber:hover{
+    color: white !important; 
+}
+
 

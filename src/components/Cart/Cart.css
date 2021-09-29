@@ -30,3 +30,17 @@
 .precioTotal{
     margin-top: 2rem;
 }
+
+.carritoVacio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.carritoVacio img {
+    width: 200px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
