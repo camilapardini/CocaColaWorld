@@ -1,40 +1,36 @@
 import { useState, useEffect } from "react"
-import { getProductos } from "../ItemList"
 import ItemDetail from "./ItemDetail";
 import { useParams } from  "react-router-dom";
+import { getFirestore } from "../../services/getFirebase";
+import Cargando from "../Spinner";
+
 
 const ItemDetailContainer = () => {
 
     const [ producto, setProducto ] = useState()
     const [loading, setLoading] = useState(true)
-
     const { id } = useParams ();
-
-    useEffect(() => {
     
-        getProductos
-       
-            .then((respuesta) =>{
-                 if  (id){ 
-                const productoFiltrado = respuesta.filter((prod) => prod.id === parseInt(id))
-                setProducto (productoFiltrado)         
-            }else {
-      
-            setProducto(respuesta)         
-        }
-        
-        })
-        .catch((error) => console.log(error))
-        
-              
-        
-    }, [id])
+    
+
+        useEffect(() => {
+            setLoading(true)
+            const dbQuery = getFirestore()
+            const itemOne = dbQuery.collection('productos').doc(id)
+            itemOne
+                .get()
+                .then(result => setProducto({ id: result.id, ...result.data() }))
+                .catch(err => console.error(err))
+                .finally(() => setLoading(false))
+        }, [id, setLoading])
+
 
 
     return (
         <>
-            {producto && <ItemDetail key={ producto [0].id} producto={producto[0]} />}
-            
+             { loading ? <Cargando /> 
+             : producto && <ItemDetail producto= {producto} initial= {1} />}
+             
         </>
     )
 }
