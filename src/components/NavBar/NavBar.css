@@ -56,11 +56,13 @@
 .cartNumber{
     background-color: red;
     padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+    color: white;
     border-radius: 50%;
+    font-size: 1rem;
 }
 
-.cartNumber:hover{
-    color: white !important; 
+a {
+    text-decoration: none  !important;
 }
 
 

@@ -56,7 +56,9 @@ return (
         <Nav>
 
           <Nav.Link href="cart">
+          <Link to="/cart">
             <CartWidget />
+            </Link>
           </Nav.Link>
 
         </Nav>
