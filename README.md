@@ -3,7 +3,7 @@
 Ecommerce de venta usando React JS
 
 # Navegación
-![] (https://i.ibb.co/ss8B6ZY/Ecommerce-React.gif)
+![gif] (./Ecommerce.gif) 
 
 
 # Dependencias:
