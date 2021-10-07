@@ -3,7 +3,7 @@
 Ecommerce de venta usando React JS
 
 # Navegación
-![gif] (./Ecommerce.gif) 
+![gif] (https://github.com/camilapardini/CocaColaWorld/blob/master/src/Ecommerce.gif) 
 
 
 # Dependencias:
