@@ -1,6 +1,6 @@
 import "./ItemDetail.css"
-import { useState, useContext } from "react"
-import ItemCount from "../ItemCount"
+import { useState } from "react"
+import ItemCount from "../ItemCount/ItemCount"
 import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
 import { useCartContext } from "../Context/cartContext"
@@ -31,7 +31,7 @@ function ItemDetail( {producto={}} ) {
          <hr />
         <div className='cardDetalle'>
             <div className="cardImagen">
-                 <img  src={producto.pictureUrl} className="cardImg" />
+                 <img  src={producto.pictureUrl} className="cardImg" alt= "imagen producto" />
             </div>
             <div className="cardBody">
                 <h3>Ingredientes</h3>
@@ -47,7 +47,8 @@ function ItemDetail( {producto={}} ) {
                 <div className= "cardFooter">
 
                 { cambiarBoton ?
-                <ItemCount stock={20} initial={1} onAdd = {onAdd} />
+        
+                <ItemCount stock={producto.stock} initial={1} onAdd = {onAdd} />
                 :
                 <div>
                     <Link to= {"/cart"}>

@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
      return(
          <>
 
-    <Card  className= "cardProducto" style={{ width: '22rem' }}>
+    <Card  className= "cardProducto" style={{ width: '18rem' }}>
             <Card.Img variant="top" src= {props.pictureUrl} className= "imagenProducto" />
         <Card.Body className= "cardBody">
             <Card.Title className="tituloCard">{props.title}</Card.Title>

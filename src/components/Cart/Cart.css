@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700;800&display=swap');
 
 .bodyCart{
-    height: 100vh;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .contenedorCardsCarro{
@@ -36,11 +39,40 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80%;
+    height: 100vh;
 }
 
 .carritoVacio img {
     width: 200px;
     margin-top: 3rem;
     margin-bottom: 3rem;
+}
+
+
+.botonEliminar{
+    color: rgb(227, 13, 13);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.botonEliminar:hover{
+    color:black
+}
+
+.botonSeguirComprando{
+    background-color: white;
+    color: black;
+    border: 1.5px solid black;
+    font-weight: 500;
+    margin: 2rem;
+}
+
+.botonVaciarCarrito{
+ 
+        margin: 0.7rem;
+        color: white;
+        font-weight: 700;
+        background-color: black;
+        border: none;
+        margin: 2rem;
 }

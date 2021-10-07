@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import ItemDetail from "./ItemDetail";
 import { useParams } from  "react-router-dom";
 import { getFirestore } from "../../services/getFirebase";
-import Cargando from "../Spinner";
+import Cargando from "../Spinner/Spinner";
 
 
 const ItemDetailContainer = () => {

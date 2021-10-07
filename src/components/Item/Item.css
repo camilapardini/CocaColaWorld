@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700;800&display=swap');
 
 .cardProducto{
-    margin: 5rem;
+    
+    margin: 3rem;
     height: auto;
+    width: 40px;
     font-family: 'Open Sans', sans-serif;
     border: none;
     border-radius: 10px;
@@ -24,6 +26,8 @@
 }
 
 .imagenProducto{
-    width: 70%;
+    width: 50%;
     margin-top: 1rem;
 }
+
+

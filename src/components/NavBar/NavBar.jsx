@@ -17,14 +17,14 @@ return (
 
       <Link to="/">
       <Navbar.Brand>
-        <img src={logo} className="logo" />
+        <img src={logo} className="logo" alt= "logo coca cola" />
       </Navbar.Brand>
       </Link>
 
 
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="me-auto">
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" style= {{backgroundColor: "white"}} />
+      <Navbar.Collapse id="responsive-navbar-nav" style= {{backgroundColor: "rgb(14, 14, 14)", borderRadius: "10px", zIndex: "10"}} >
+        <Nav className="me-auto" >
 
           <Link to="/" className="nav-link"> Home</Link>
 
