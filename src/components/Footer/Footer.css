@@ -72,3 +72,12 @@
     font-size:13px;
     margin-bottom:0;
   }
+
+  .linksFooter{
+    cursor: pointer;
+    color: rgb(143, 140, 140);
+  }
+
+  .linksFooter:hover{
+    color: rgb(216, 212, 212);
+  }

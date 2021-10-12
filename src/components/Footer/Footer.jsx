@@ -12,17 +12,17 @@ return (
                     <div class="col-sm-6 col-md-3 item">
                         <h3>Nosotros</h3>
                         <ul>
-                            <li><a href="javascript:void(0)">Carreras</a></li>
-                            <li><a href="javascript:void(0)">Trabaja con nosotros</a></li>
-                            <li><a href="javascript:void(0)">Resto del mundo</a></li>
+                            <li className= "linksFooter">Carreras</li>
+                            <li className= "linksFooter">Trabaja con nosotros</li>
+                            <li className= "linksFooter">Resto del mundo</li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-3 item">
                         <h3>Legales</h3>
                         <ul>
-                            <li><a href="javascript:void(0)">Términos y condiciones</a></li>
-                            <li><a href="javascript:void(0)">Política de privacidad </a></li>
-                            <li><a href="javascript:void(0)">Bases y condiciones</a></li>
+                            <li className= "linksFooter">Términos y condiciones</li>
+                            <li className= "linksFooter">Política de privacidad </li>
+                            <li className= "linksFooter">Bases y condiciones</li>
                         </ul>
                     </div>
                     <div class="col-md-6 item text">
