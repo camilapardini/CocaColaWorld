@@ -20,7 +20,6 @@ function Checkout({ name, ...props }) {
         name: "",
         tel: "",
         email: "",
-        emailConfig: ""
     })
 
     const handleOnSubmit = (e) =>{        

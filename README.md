@@ -2,9 +2,22 @@
 
 Ecommerce de venta usando React JS
 
+# Demo
+
+Ver [DEMO]() de la app
+
 # Navegación
 ![gif](https://github.com/camilapardini/CocaColaWorld/blob/master/src/Ecommerce.gif) 
 
+# Instrucciones para usar la aplicación de manera local
+
+coca-cola-world requiere Node.js para ejecutarse. Utilizar los siguientes comandos:
+
+```sh
+cd CocaColaWorld
+npm install
+node start
+```
 
 # Dependencias:
 La aplicación utiliza las siguientes dependencias:
