@@ -5,9 +5,7 @@ import "./Cart/Cart.css"
 export const faTrash = () => {
     return (
         <>
-            
         <FaTrashAlt  className= "botonEliminar"/>
-
         </>
     )
 }

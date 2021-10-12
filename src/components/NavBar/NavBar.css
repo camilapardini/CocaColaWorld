@@ -36,6 +36,10 @@
     border: 0;
 }
 
+.categorias:hover{
+    color: grey!important;
+}
+
 .nav-link{
     color: white !important; 
     text-decoration: none;

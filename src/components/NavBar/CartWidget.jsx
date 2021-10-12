@@ -11,7 +11,6 @@ const CartWidget = () => {
             {cartList.length === 0 ?
                 <>
                     <FaShoppingCart className= "cart" />
-            
                 </>
                 :
                 <>
@@ -21,7 +20,6 @@ const CartWidget = () => {
             }
         </>
     )
- 
 }
 
 export default CartWidget

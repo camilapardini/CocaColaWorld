@@ -4,12 +4,10 @@ import Button from 'react-bootstrap/Button'
 import './ItemCount.css'
 
 
-
 const ItemCount = ({stock, initial, onAdd}) => {
 
     const [count, setCount] = useState(initial)
     
-
 
     function sumar (){
         if (count < stock) {
@@ -29,10 +27,8 @@ const ItemCount = ({stock, initial, onAdd}) => {
     }
     
     
-
     return (
         <>
-   
             <div className= "botones">    
             <Button className= "botonContador" onClick = {restar}>-</Button>
             <label className= "numeroContador"> {count} </label>

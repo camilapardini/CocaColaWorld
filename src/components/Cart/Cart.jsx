@@ -13,7 +13,7 @@ const Cart = () => {
     
     const {cartList, cantidadTotal, clearList, removeItem, precioTotal} = useCartContext ()
 
-    return (
+return (
         
     <div className= "bodyCart">
         
@@ -22,23 +22,31 @@ const Cart = () => {
             <div className= "carritoVacio">   
                 <h2>Tu carrito esta vacio</h2> 
                 <img src= {CarroVacio} className="imgEnCart" alt="carro vacio" />
-                <Link to= {"/"}>
-                                <Button className= "botonContador">Ir a productos</Button>
-                            </Link>
+                        <Link to= {"/"}>
+                            <Button className= "botonContador">Ir a productos</Button>
+                        </Link>
             </div>
             :   
             
             <>
+             <div className="contenedorMayor">
+            <div className="contenedorTitulos">
+            <p>Precio</p>
+            <p>Total</p>
+            </div>
+            </div>
                 {cartList.map(producto =>(
 
                     <div className="contenedorCardsCarro">
                         <div className="contenedorProd" key={producto.producto.id}>
                             
                             <img src={producto.producto.pictureUrl} className="imgEnCart" alt="imagen producto" />
-                            <p>{producto.producto.title}</p>
-                            <p>{producto.quantity} unidades</p>
-                            <p>${producto.producto.price}</p>
-                            <p>${(producto.producto.price * producto.quantity)}</p>
+                            <p className= "datosProductos">{producto.producto.title}</p>
+                            <p className= "datosProductos">{producto.quantity} unidades</p>
+                            <p className= "datosProductos">${producto.producto.price}</p>
+                            <p className= "datosProductos">${(producto.producto.price * producto.quantity)}</p>
+                          
+                           
                             <p onClick={()=> removeItem(producto.producto.id)}><FaTrash /></p>
         
                         </div>
@@ -48,7 +56,7 @@ const Cart = () => {
 
                 <div className= "precioTotal">
                 <p>Cantidad total de productos: {cantidadTotal()}</p>
-                <p>Precio total: ${precioTotal()}</p>
+                <p>Precio a abonar: ${precioTotal()}</p>
                 </div>
                 <div className= "botonesCompra">
                 <Button className="botonVaciarCarrito" onClick={clearList}>Vaciar carrito</Button>

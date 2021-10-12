@@ -28,8 +28,9 @@ return (
 
           <Link to="/" className="nav-link"> Home</Link>
 
-          <Link to="#" className="nav-link"> Nosotros</Link>
+          <Link to="/#nosotros" className="nav-link"> Nosotros</Link>
 
+          
           <NavDropdown title="Productos" id="collasible-nav-dropdown">
 
             <NavDropdown.Item>
@@ -67,6 +68,7 @@ return (
   </Navbar>
 
 </>
-)
-}
+
+)}
+
 export default NavBar

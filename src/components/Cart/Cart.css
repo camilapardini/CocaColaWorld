@@ -2,6 +2,7 @@
 
 .bodyCart{
     height: auto;
+    min-height: 90vh ;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -11,7 +12,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  
     
 }
 
@@ -22,7 +22,6 @@
     align-items: center;
     width: 50%;
     border-bottom: 1px solid rgb(164, 162, 162);
-    margin-top: 2rem;
     
 }
 
@@ -32,6 +31,11 @@
 
 .precioTotal{
     margin-top: 2rem;
+}
+
+.precioTotal p {
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .carritoVacio{
@@ -75,4 +79,79 @@
         background-color: black;
         border: none;
         margin: 2rem;
+}
+
+
+.contenedorMayor{
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.contenedorTitulos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
+    margin-top: 2rem;
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+
+
+/* ---------- RESPONSIVE MEDIA QUERY ------------- */
+
+
+@media (max-width: 480px) {
+    
+    .bodyCart{
+        height: auto;
+        min-height: 60vh ;
+    } 
+    .contenedorProd{
+ 
+        width: 90%;
+    }
+    
+    .imgEnCart{
+        width: 60px;
+    }
+
+    .datosProductos {
+        font-size: 0.8rem;
+    }
+    
+    .precioTotal p {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    
+    .carritoVacio img {
+        width: 100px;
+    }
+    
+    .botonEliminar{
+        font-size: 20px;
+
+    }
+    
+    .botonSeguirComprando{
+        margin: 0rem;
+    }
+    
+    .botonVaciarCarrito{
+
+        margin: 1rem;
+    }
+
+    .contenedorMayor{
+        width: 90%;
+    }
+    .contenedorTitulos{
+        width: 30%;
+        margin-top: 1rem;
+        font-weight: 700;
+        font-size: 1rem;
+    }
 }

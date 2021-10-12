@@ -1,3 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700;800&display=swap');
+
+
+#nosotros{
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#nosotros h2{
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+
+#nosotros p{
+    width: 45%;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
 
 
 .conjuntoCards{
@@ -38,4 +63,68 @@
 .hvr-grow:active {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+}
+
+
+@media (max-width: 480px) {
+
+    .conjuntoIconos{
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        margin: 0;
+    }
+
+    .categoriaIconos{
+        font-size: 1rem;
+    }
+
+    #nosotros{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    #nosotros h2{
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+    
+    
+    #nosotros p{
+        width: 95%;
+        margin-top: 0.8rem;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #nosotros h2{
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+    
+    #nosotros p{
+        width: 95%;
+        margin-top: 0.8rem;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 1440px) {
+
+    #nosotros h2{
+        font-weight: 600;
+        font-size: 2.2rem;
+    }
+    
+    #nosotros p{
+        width: 60%;
+        margin-top: 0.8rem;
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
 }

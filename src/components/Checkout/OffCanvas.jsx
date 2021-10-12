@@ -10,29 +10,27 @@ import { useCartContext } from "../Context/cartContext"
 import "./Checkout.css"
 
 function Checkout({ name, ...props }) {
-    const [show, setShow] = useState(false);
 
+    const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
     const {cartList, cantidadTotal, clearList,  precioTotal} = useCartContext ()
 
     const [ formData, setFormData ] = useState({
         name: "",
         tel: "",
-        email: ""
+        email: "",
+        emailConfig: ""
     })
 
     const handleOnSubmit = (e) =>{        
-        e.preventDefault()        
+        e.preventDefault() 
+
         let orden = {}
 
         orden.date = firebase.firestore.Timestamp.fromDate( new Date() );
-        
         orden.buyer = formData
-        
         orden.total = precioTotal();
-
         orden.cantidad = cantidadTotal(); 
         
         orden.items = cartList.map(cartProducto => {
@@ -45,6 +43,8 @@ function Checkout({ name, ...props }) {
 
 
         const db = getFirestore()
+
+        if (formData.email === formData.emailConf) {
         db.collection('ordenes').add(orden)
         .then(resp => Swal.fire(
             '¡Compra Exitosa!',
@@ -59,7 +59,13 @@ function Checkout({ name, ...props }) {
                 email: ''
             }) 
              clearList()}
-        )
+        )} else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Los mails ingresados deben coincidir',
+                })
+        }
        
         const productosToUpdate = db.collection('productos').where(
             firebase.firestore.FieldPath.documentId(), 'in', cartList.map(i=> i.producto.id)
@@ -89,8 +95,6 @@ function Checkout({ name, ...props }) {
         })
     }
 
-
-  
     return (
       <>
       <Button className="botonContador"  onClick={handleShow}>Terminar compra</Button>
@@ -121,18 +125,6 @@ function Checkout({ name, ...props }) {
 
                 <br />
 
-                <Form.Group className="mb-3" controlId="mail">
-                    <Form.Floating className="mb-3">
-                        <Form.Control 
-                        required type="mail" 
-                        placeholder="email"
-                        name="email"  
-                        value={formData.email} 
-                        />
-                        <Form.Label>Ingresa tu mail</Form.Label>
-                    </Form.Floating>
-                </Form.Group>
-                
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Floating className="mb-3">
                         <Form.Control 
@@ -143,18 +135,41 @@ function Checkout({ name, ...props }) {
                         />
                         <Form.Label>Telefono</Form.Label>
                     </Form.Floating>
+                </Form.Group>    
+
+                <Form.Group className="mb-3" controlId="email">
+                    <Form.Floating className="mb-3">
+                        <Form.Control 
+                        required type="mail" 
+                        placeholder="email"
+                        name="email"  
+                        value={formData.email} 
+                        />
+                        <Form.Label>Ingresa tu mail</Form.Label>
+                    </Form.Floating>
                 </Form.Group>
+                <Form.Group className="mb-3" controlId="emailConf">
+                    <Form.Floating className="mb-3">
+                        <Form.Control 
+                        required type="mail" 
+                        placeholder="emailConf"
+                        name="emailConf"  
+                        value={formData.emailConf} 
+                        />
+                        <Form.Label>Repetí tu mail</Form.Label>
+                    </Form.Floating>
+                </Form.Group>
+                
+                
                 <Button className= "botonContador" type="submit" >
                     ¡Finalizar Compra!
                 </Button>
             </Form>
-
           </Offcanvas.Body>
         </Offcanvas>
-
         
       </>
     );
-  }
+}
   
   export default Checkout;

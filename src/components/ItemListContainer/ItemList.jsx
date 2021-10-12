@@ -15,31 +15,25 @@ function ItemList () {
 
     useEffect(() => {
 
-        if(idCategoria ){
         const dbQuery = getFirestore()
-        dbQuery.collection("productos").where("categoria", "==", idCategoria).get()
+        const nuevaColeccion = idCategoria ?
+                                    dbQuery.collection("productos").where("categoria", "==", idCategoria)
+                                    :
+                                    dbQuery.collection("productos")
+
+        nuevaColeccion.get()
         .then(resp => {
-            setProductos ( resp.docs.map(producto => ({id : producto.id, ...producto.data() }  ) ) )
+            setProductos (resp.docs.map(producto => ({id : producto.id, ...producto.data() }  ) ) )
         })
         .catch(err =>console.log(err))
         .finally(()=> setLoading(false))
-        
-        } else {
-            const dbQuery = getFirestore()
-            dbQuery.collection("productos").get()
-            .then(resp => {
-                setProductos ( resp.docs.map(producto => ({id : producto.id, ...producto.data() }  ) ) )
-            })
-            .catch(err =>console.log(err))
-            .finally(()=> setLoading(false))
-        } 
-        
+
     }, [idCategoria, setLoading])
-    
+
+
     
     return (
         <>             
-
             { loading ? <Cargando /> : 
             <>
             <Carousel>
@@ -68,7 +62,17 @@ function ItemList () {
         
             </Carousel.Item>
           </Carousel>
-            <div className= "conjuntoIconos">
+
+          <div id= "nosotros"> 
+              <h2>Sobre Nosotros</h2>
+              <p>En mayo de 1866, John Pemberton sirvió en Atlanta la primera Coca-Cola. Desde esa bebida icónica hasta hoy hemos recorrido un largo camino: el que nos llevó a convertirnos en una Compañía Integral de Bebidas. Somos Coca-Cola y mucho más…
+                Reunimos las coca-cola más exóticas de distintos países para que puedas conocerlas y disfrutarlas.
+              </p>
+          
+          </div> 
+          
+          
+          <div className= "conjuntoIconos">
            
             <div>
                 <Link to="/">
@@ -107,10 +111,6 @@ function ItemList () {
         
         </>
         }  
-
-
-        
-          
     </>
     )
 }

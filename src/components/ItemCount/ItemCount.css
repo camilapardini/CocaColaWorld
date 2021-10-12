@@ -1,11 +1,12 @@
 
 .botones{
     margin-bottom: 1.5rem;
+    outline: none;
 }
 
 .numeroContador{
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.4rem;
 }
 .botonContador{
     margin: 0.7rem;
@@ -13,6 +14,7 @@
     font-weight: 700;
     background-color: black;
     border: none;
+    outline: none;
 }
 
 .btn-primary:hover,

@@ -9,8 +9,8 @@ Ecommerce de venta usando React JS
 # Dependencias:
 La aplicación utiliza las siguientes dependencias:
 
-React-Bootstrap 
-Bootstrap-icons 
-Firebase (uso de base de datos)
-SweetAlerts2 (libreria de JavaScript)
-React-router-dom 
+- React-Bootstrap (Framework de estilos)
+- Bootstrap-icons (uso de iconos)
+- Firebase (uso de base de datos)
+- SweetAlerts2 (libreria de JavaScript)
+- React-router-dom (usado para el sistema de navegación entre páginas)
