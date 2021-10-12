@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import logo from '../NavBar/logo.png'
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link"
 
 
 const NavBar =() => {
@@ -28,40 +29,43 @@ return (
 
           <Link to="/" className="nav-link"> Home</Link>
 
-          <Link to="/#nosotros" className="nav-link"> Nosotros</Link>
+          <HashLink to="/#nosotros" className="nav-link"> Nosotros</HashLink>
 
           
           <NavDropdown title="Productos" id="collasible-nav-dropdown">
-
+          
+          <NavDropdown.Item>
+              <HashLink to="/#conjuntoIconos" className="categorias">
+              Ver todo
+              </HashLink>
+            </NavDropdown.Item>
+  
             <NavDropdown.Item>
-              <Link to="/categoria/botellas" className="categorias">
+              <HashLink to="/categoria/botellas/#conjuntoIconos" className="categorias">
               Botellas
-              </Link>
+              </HashLink>
             </NavDropdown.Item>
 
             <NavDropdown.Item>
-              <Link to="/categoria/latas" className="categorias">
+            <HashLink to="/categoria/latas/#conjuntoIconos" className="categorias">
               Latas
-              </Link>
+              </HashLink>
             </NavDropdown.Item>
 
             <NavDropdown.Item>
-              <Link to="/categoria/saborizadas" className="categorias">
+            <HashLink to="/categoria/saborizadas/#conjuntoIconos" className="categorias">
               Saborizadas
-              </Link>
+              </HashLink>
             </NavDropdown.Item>
-
-
           </NavDropdown>
+       
         </Nav>
         <Nav>
-
           <Nav.Link href="cart">
           <Link to="/cart">
             <CartWidget />
             </Link>
           </Nav.Link>
-
         </Nav>
       </Navbar.Collapse>
     </Container>

@@ -72,7 +72,7 @@ function ItemList () {
           </div> 
           
           
-          <div className= "conjuntoIconos">
+          <div id= "conjuntoIconos">
            
             <div>
                 <Link to="/">
